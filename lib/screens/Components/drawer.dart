@@ -3,6 +3,7 @@ import 'package:insurance_app/screens/Contacts/Contacts.dart';
 import 'package:insurance_app/screens/BuisnessCase/BuissnessCase.dart';
 import 'package:insurance_app/screens/Quotation/Quotation.dart';
 import 'package:insurance_app/screens/PolicyEnquiry/PolicyEnquiry.dart';
+import 'package:insurance_app/screens/Quotation/QuotationSummary.dart';
 
 
 class MainDrawer extends StatelessWidget {
@@ -82,7 +83,7 @@ class MainDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => PolicyEnquiry()));
+                  MaterialPageRoute(builder: (context) => QuotationSummary()));
             }
           )
         ],

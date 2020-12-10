@@ -4,7 +4,12 @@ import 'package:insurance_app/screens/Components/AppBar.dart';
 
 import 'QuotationForm.dart';
 
-class DlLoanSecure extends StatelessWidget {
+class DlLoanSecure extends StatefulWidget {
+  @override
+  _DlLoanSecureState createState() => _DlLoanSecureState();
+}
+
+class _DlLoanSecureState extends State<DlLoanSecure> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +65,9 @@ class DlLoanSecure extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20),
             child: Center(
               child: RaisedButton(
+                color: Color1,
                 onPressed: () {
+
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => QuotationForm()));
                 },

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insurance_app/screens/Components/AppBar.dart';
+import 'package:insurance_app/screens/Quotation/Model/User.dart';
 import 'package:insurance_app/screens/Quotation/ProposerForm.dart';
 
 import 'BenefitForm.dart';
@@ -16,7 +17,12 @@ class QuotationForm extends StatefulWidget {
 }
 
 class _QuotationFormState extends State<QuotationForm> {
+
+  User NewUser = User(null,null,null,null,null,null,);
+
   final ScrollController _scrollController = ScrollController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   int currentStep = 0;
   bool complete = false;
   int len = 3;
@@ -71,7 +77,6 @@ class _QuotationFormState extends State<QuotationForm> {
         content: Column(
           children: [
             Container(
-
 
                 margin: new EdgeInsets.all(0.0),
                 child: Scrollbar(

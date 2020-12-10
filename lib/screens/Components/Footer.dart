@@ -1,19 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:insurance_app/screens/Components/AppBar.dart';
+
 
 
 class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-
-      size: Size(800,100), //You can Replace this with your desired WIDTH and HEIGHT
-      painter: RPSCustomPainter(),
-    );
+    return  Container(
+        height: 60,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: CustomPaint(
+                size: Size(MediaQuery.of(context).size.width, 80),
+                //You can Replace this with your desired WIDTH and HEIGHT
+                painter: RPSCustomPainter_4(),
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Text("FuturaInsTech",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+            )
+          ],
+        ));
   }
 }
-class RPSCustomPainter extends CustomPainter{
 
 
+
+class RPSCustomPainter_1 extends CustomPainter{
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -21,22 +37,19 @@ class RPSCustomPainter extends CustomPainter{
 
 
     Paint paint_0 = new Paint()
-
-      ..color = Colors.purple
-
+      ..color = Color1
       ..style = PaintingStyle.fill
-      ..strokeWidth = 4.95;
-
+      ..strokeWidth = 1;
 
 
     Path path_0 = Path();
-    path_0.moveTo(0,size.height*0.20);
-    path_0.quadraticBezierTo(size.width*0.07,size.height*0.73,size.width*0.25,size.height*0.70);
-    path_0.cubicTo(size.width*0.36,size.height*0.70,size.width*0.58,size.height*0.70,size.width*0.69,size.height*0.70);
-    path_0.quadraticBezierTo(size.width*0.97,size.height*0.64,size.width,0);
+    path_0.moveTo(0,0);
+    path_0.quadraticBezierTo(size.width*0.17,size.height*0.49,size.width*0.38,size.height*0.50);
+    path_0.cubicTo(size.width*0.44,size.height*0.50,size.width*0.56,size.height*0.50,size.width*0.63,size.height*0.50);
+    path_0.quadraticBezierTo(size.width*0.83,size.height*0.49,size.width,0);
     path_0.lineTo(size.width,size.height);
     path_0.lineTo(0,size.height);
-    path_0.lineTo(0,size.height*0.20);
+    path_0.lineTo(0,0);
     path_0.close();
 
     canvas.drawPath(path_0, paint_0);
@@ -50,3 +63,108 @@ class RPSCustomPainter extends CustomPainter{
   }
 
 }
+
+
+class RPSCustomPainter_2 extends CustomPainter{
+
+  @override
+  void paint(Canvas canvas, Size size) {
+
+
+
+    Paint paint_0 = new Paint()
+      ..color = Color1
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1;
+
+
+    Path path_0 = Path();
+    path_0.moveTo(0,size.height);
+    path_0.quadraticBezierTo(size.width*0.17,size.height*-0.01,size.width*0.50,0);
+    path_0.quadraticBezierTo(size.width*0.83,size.height*0.00,size.width,size.height);
+    path_0.lineTo(0,size.height);
+    path_0.close();
+
+    canvas.drawPath(path_0, paint_0);
+
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+
+}
+
+
+class RPSCustomPainter_3 extends CustomPainter{
+
+  @override
+  void paint(Canvas canvas, Size size) {
+
+
+
+    Paint paint_0 = new Paint()
+      ..color = Color1
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1;
+
+
+    Path path_0 = Path();
+    path_0.moveTo(0,size.height);
+    path_0.lineTo(0,size.height*0.50);
+    path_0.quadraticBezierTo(size.width*0.29,size.height*0.01,size.width*0.50,0);
+    path_0.quadraticBezierTo(size.width*0.71,size.height*0.01,size.width,size.height*0.50);
+    path_0.lineTo(size.width,size.height);
+    path_0.lineTo(0,size.height);
+
+    canvas.drawPath(path_0, paint_0);
+
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+
+}
+
+
+class RPSCustomPainter_4 extends CustomPainter{
+
+  @override
+  void paint(Canvas canvas, Size size) {
+
+
+
+    Paint paint_0 = new Paint()
+      ..color = Color1
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1;
+
+
+    Path path_0 = Path();
+    path_0.moveTo(0,size.height*0.50);
+    path_0.quadraticBezierTo(size.width*0.38,size.height*0.51,size.width*0.50,size.height*0.50);
+    path_0.quadraticBezierTo(size.width*0.83,size.height*0.51,size.width,0);
+    path_0.lineTo(size.width,size.height);
+    path_0.lineTo(0,size.height);
+    path_0.lineTo(0,size.height*0.50);
+    path_0.close();
+
+    canvas.drawPath(path_0, paint_0);
+
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+
+}
+
+
+

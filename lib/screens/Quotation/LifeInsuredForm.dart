@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:insurance_app/screens/Components/AppBar.dart';
 import 'package:insurance_app/screens/Components/DateTimePicker.dart';
 
-
-
 class LifeInsuredElement extends StatefulWidget {
   @override
   _LifeInsuredElementState createState() => _LifeInsuredElementState();
@@ -312,6 +310,6 @@ class _LifeInsuredElementState extends State<LifeInsuredElement> {
         ],
       ),
     );
-    ;
+
   }
 }

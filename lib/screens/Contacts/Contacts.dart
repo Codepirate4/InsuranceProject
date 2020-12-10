@@ -11,7 +11,7 @@ class Contacts extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: CustomAppBar("Buissness Case"),
+      appBar: CustomAppBar("Contacts Page"),
       drawer: MainDrawer(),
       body: Center(
 

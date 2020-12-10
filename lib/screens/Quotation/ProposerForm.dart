@@ -70,16 +70,7 @@ class _ProposerFormState extends State<ProposerForm> {
             ),
           ),
         ),
-        Theme(
-          data: ThemeData(primaryColor: mainColor),
-          child: TextFormField(
-            obscureText: true,
-            cursorColor: mainColor,
-            decoration: InputDecoration(
-              labelText: 'Password',
-            ),
-          ),
-        ),
+
         Container(
           padding: EdgeInsets.only(top: 20),
           child: Column(
